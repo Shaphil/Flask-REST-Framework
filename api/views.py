@@ -2,6 +2,7 @@ from api.infra import APIView
 
 
 class DemoApi(APIView):
+    message = '.:: Welcome to Flask-REST-Framework ::.'
 
     def get(self):
-        return {'message': '.:: Welcome to Flask-REST-Framework ::.'}
+        return {'message': self.message}
