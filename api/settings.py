@@ -1,10 +1,23 @@
 """The settings module"""
 
-from secrets import token_hex
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class Config(object):
     # Application settings
     DEVELOPMENT = True
     TESTING = False
-    SECRET_KEY = token_hex()
+    SECRET_KEY = os.getenv('SECRET_KEY')
+
+
+class DevelopmentConfig(Config):
+    pass
+
+
+class ProductionConfig(Config):
+    # Application settings
+    DEVELOPMENT = False
