@@ -1,4 +1,4 @@
-from api.infra import APIView
+from api.infra.views import APIView
 
 
 class DemoApi(APIView):
