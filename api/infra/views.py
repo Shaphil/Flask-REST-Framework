@@ -1,6 +1,6 @@
 from flask.views import MethodView
 
-from .error import APINotImplementedException
+from .errors import APINotImplementedException
 
 
 class APIView(MethodView):
